@@ -1,23 +1,29 @@
-/**
- * @param {number[]} height
- * @return {number}
- */
 var trap = function(height) {
+    let left = 0;
+    let right = height.length - 1;
+
+    let maxLeft = 0;
+    let maxRight = 0;
+
     let total = 0;
 
-    for (let i = 0; i < height.length; i++) {
-        let maxLeft = 0;
-        let maxRight = 0;
-
-        for (let l = 0; l <= i; l++) {
-            maxLeft = Math.max(maxLeft, height[l]);
+    while (left < right) {
+        if (height[left] < height[right]) {
+            if (height[left] >= maxLeft) {
+                maxLeft = height[left];
+            } else {
+                total += maxLeft - height[left];
+            }
+            left++;
+        } else {
+            if (height[right] >= maxRight) {
+                maxRight = height[right];
+            } else {
+                total += maxRight - height[right];
+            }
+            right--;
         }
-
-        for (let r = i; r < height.length; r++) {
-            maxRight = Math.max(maxRight, height[r]);
-        }
-
-        total += Math.min(maxLeft, maxRight) - height[i];
     }
+
     return total;
 };
