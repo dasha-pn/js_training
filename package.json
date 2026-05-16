@@ -1,0 +1,22 @@
+{
+  "name": "js_training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rotate_image.js",
+  "scripts": {
+    "start": "node rotate_image.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dasha-pn/js_training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dasha-pn/js_training/issues"
+  },
+  "homepage": "https://github.com/dasha-pn/js_training#readme"
+}
